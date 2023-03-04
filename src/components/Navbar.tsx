@@ -19,7 +19,7 @@ function Navbar() {
         <ul className="menu menu-horizontal px-1 md:flex hidden gap-2">
           {navLinks.map((link, index) => (
             <Animated animationName="slide-top" duration="0.75s" delay={`${index * 0.1}s`} as="li" key={index}>
-              <Link to={link.path} className="text-primary hover:text-primary-focus rounded-lg">
+              <Link to={link.path} className="rounded-lg">
                 {link.name}
               </Link>
             </Animated>
