@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     container: {
       center: true,
@@ -21,8 +21,30 @@ module.exports = {
     },
     extend: {},
   },
-  plugins: [require("@tailwindcss/typography"), require("daisyui")],
+  plugins: [require('@tailwindcss/typography'), require('daisyui'), require('@tailwindcss/line-clamp')],
   daisyui: {
-    themes: ["light", "dark"],
+    themes: [
+      {
+        mytheme: {
+          primary: '#0701a8',
+
+          secondary: '#668ecc',
+
+          accent: '#06b6d4',
+
+          neutral: '#1C151E',
+
+          'base-100': '#F6F6F9',
+
+          info: '#449FE9',
+
+          success: '#41D8AD',
+
+          warning: '#F29531',
+
+          error: '#EF6270',
+        },
+      },
+    ],
   },
 };
