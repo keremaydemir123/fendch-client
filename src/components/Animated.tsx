@@ -8,9 +8,21 @@ type Props = {
   repeat?: string;
   as: keyof JSX.IntrinsicElements;
   className?: string;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
 };
 
-function Animated({ children, animationName, duration, delay, repeat, as, className }: Props) {
+function Animated({
+  children,
+  animationName,
+  duration,
+  delay,
+  repeat,
+  as,
+  className,
+  onMouseEnter,
+  onMouseLeave,
+}: Props) {
   const Element = React.createElement(
     as,
     {
@@ -20,6 +32,8 @@ function Animated({ children, animationName, duration, delay, repeat, as, classN
         animationDelay: delay,
       },
       className: className,
+      onMouseEnter: onMouseEnter,
+      onMouseLeave: onMouseLeave,
     },
     children,
   );

@@ -1,5 +1,6 @@
-import ProjectCard from './ProjectCard';
-import { Project } from '../types/Project';
+import React from 'react';
+import ProjectCard from '../cards/ProjectCard';
+import { Project } from '../../types/Project';
 
 type Props = {
   projects: Project[];

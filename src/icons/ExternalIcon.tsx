@@ -8,7 +8,7 @@ function ExternalIcon() {
       viewBox="0 0 24 24"
       strokeWidth="1.5"
       stroke="currentColor"
-      className="w-8 h-8 text-accent-content hover:text-accent-focus cursor-pointer duration-200"
+      className="w-8 h-8 text-white hover:opacity-80 cursor-pointer duration-100"
     >
       <path
         strokeLinecap="round"

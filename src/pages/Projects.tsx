@@ -1,11 +1,12 @@
-import ProjectList from '../components/ProjectList';
-import ProjectToolbar from '../components/ProjectToolbar';
+import React from 'react';
+import ProjectList from '../components/lists/ProjectList';
+import ProjectToolbar from '../components/toolbars/ProjectToolbar';
 
 const projects = [
   {
     name: 'Project 1',
     description: 'This is a project',
-    tags: ['tag1', 'tag2'],
+    tags: ['redux', 'react'],
     githubLink: 'https://github.com',
     liveLink: 'https://github.com',
   },
@@ -13,7 +14,7 @@ const projects = [
     name: 'Project 2',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt, quaerat, earum vitae voluptate temporibus laboriosam blanditiis illo ea nostrum modi consequuntur soluta? Dolore ad porro beatae asperiores neque adipisci numquam?',
-    tags: ['tag1', 'tag2'],
+    tags: ['redux', 'react'],
     githubLink: 'https://github.com',
     liveLink: 'https://github.com',
   },
