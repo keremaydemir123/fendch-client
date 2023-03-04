@@ -45,6 +45,8 @@ module.exports = {
           error: '#EF6270',
         },
       },
+      'dark',
+      'light',
     ],
   },
 };

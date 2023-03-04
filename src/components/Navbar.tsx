@@ -12,7 +12,7 @@ function Navbar() {
     <nav className="mt-4">
       <div className="flex justify-between items-center">
         <Animated animationName="slide-top" duration="0.75s" delay="0s" as="div">
-          <a href="/" className="btn btn-ghost font-bold text-2xl text-primary hover:text-primary-focus">
+          <a href="/" className="btn btn-ghost font-bold text-2xl text-base-content">
             FENDCH
           </a>
         </Animated>
@@ -32,7 +32,7 @@ function Navbar() {
           delay={`${navLinks.length * 0.1}s`}
           className="md:hidden block"
         >
-          <HamburgerIcon className="cursor-pointer" onClick={() => setOpen(true)} />
+          <HamburgerIcon onClick={() => setOpen(true)} />
         </Animated>
       </div>
       {open && (
@@ -47,11 +47,7 @@ function Navbar() {
             <XMark className="absolute top-6 right-6" onClick={() => setOpen(false)} />
             {navLinks.map((link, index) => (
               <Animated as="li" animationName="slide-right" duration="0.3s" delay={`${0.5 + index * 0.1}s`} key={index}>
-                <Link
-                  to={link.path}
-                  className="text-primary hover:text-primary-focus rounded-lg"
-                  onClick={() => setOpen(false)}
-                >
+                <Link to={link.path} className="text-xl rounded-lg" onClick={() => setOpen(false)}>
                   {link.name}
                 </Link>
               </Animated>

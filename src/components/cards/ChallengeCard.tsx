@@ -35,7 +35,7 @@ function ChallengeCard({ delay, challenge }: { delay: number; challenge: Challen
             isHovered ? 'flex' : 'hidden'
           } absolute top-0 left-0 w-full h-full justify-center items-center bg-primary bg-opacity-80 transition-all ease-in-out`}
         >
-          <ExternalIcon />
+          <ExternalIcon to="/challenges/1" />
         </div>
       </Animated>
     </div>
