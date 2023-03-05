@@ -4,7 +4,7 @@ import HeartIcon from '../../icons/HeartIcon';
 
 function CommentCard() {
   return (
-    <div className="flex flex-col h-max w-96 bg-primary-content text-primary p-2 rounded-md gap-2 shadow-md">
+    <div className="flex flex-col h-max w-96 bg-base-100 text-base-content px-4 py-3 rounded-md gap-2 shadow-md">
       <div className="flex justify-between items-center w-full">
         <div className="flex gap-2 items-center">
           <div className="avatar">
