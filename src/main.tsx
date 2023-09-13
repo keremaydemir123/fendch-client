@@ -1,22 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
+
 import App from './App';
 import './index.css';
-import './animations.css';
+import { UserProvider } from './contexts/UserProvider';
 
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import AppContainer from './components/AppContainer';
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+    },
+  },
+});
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <BrowserRouter>
-    <React.StrictMode>
-      <AppContainer>
-        <Navbar />
-        <App />
-        <Footer />
-      </AppContainer>
-    </React.StrictMode>
-  </BrowserRouter>,
+  <React.StrictMode>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <UserProvider>
+          <App />
+        </UserProvider>
+      </BrowserRouter>
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
+  </React.StrictMode>
 );

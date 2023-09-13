@@ -1,6 +1,6 @@
 import axios from 'axios';
 import SERVER_URL from './baseURL';
-import { Challenge } from '../types/Challenge';
+import { ChallengeProps } from '../types/Challenge';
 
 export async function getOldChallenges() {
   try {
@@ -39,9 +39,12 @@ export async function getChallenge(id: string | undefined) {
   }
 }
 
-export async function updateChallenge(id: string, challenge: Challenge) {
+export async function updateChallenge(id: string, challenge: ChallengeProps) {
   try {
-    const response = await axios.patch(`${SERVER_URL}/challenges/${id}`, challenge);
+    const response = await axios.patch(
+      `${SERVER_URL}/challenges/${id}`,
+      challenge
+    );
     return response.data;
   } catch (err: unknown) {
     throw new Error("Couldn't update challenge");

@@ -1,8 +1,8 @@
 import axios from 'axios';
-import { Challenge } from '../types/Challenge';
+import { ChallengeProps } from '../types/Challenge';
 import SERVER_URL from './baseURL';
 
-export async function createChallenge(challenge: Challenge) {
+export async function createChallenge(challenge: ChallengeProps) {
   const response = await axios.post(`${SERVER_URL}/challenges`, challenge);
   return response.data;
 }
