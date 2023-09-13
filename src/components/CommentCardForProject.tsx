@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { FaEdit, FaHeart, FaRegHeart, FaReply, FaTrash } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 import IconButton from './IconButton';
 import CommentForm from './CommentForm';
 import {
@@ -149,6 +150,7 @@ function CommentCardForProject({
 
   return (
     <>
+      <Toaster />
       <div className="w-full flex flex-col bg-primary rounded-md mt-4 overflow-hidden shadow-lg shadow-dark">
         <div className="flex justify-between items-center p-2 bg-dark bg-opacity-30">
           <span className="font-normal flex gap-2 items-center">

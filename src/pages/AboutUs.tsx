@@ -4,8 +4,10 @@ import Button from '../components/Button';
 import Textarea from '../components/Textarea';
 import { sendSuggestion } from '../services/suggestions';
 import BuyMeACoffeeButton from '../components/BuyMeCoffeeButton';
+import { useUser } from '../contexts/UserProvider';
 
 function AboutUs() {
+  const { user } = useUser();
   const suggestionRef = useRef<HTMLTextAreaElement>(null);
 
   async function onSendSuggestion(e: React.FormEvent<HTMLFormElement>) {
@@ -15,7 +17,14 @@ function AboutUs() {
       return;
     }
     try {
-      await sendSuggestion(suggestionRef.current?.value);
+      if (!user?.username) {
+        toast.error('Please login to send a suggestion!');
+        return;
+      }
+      await sendSuggestion({
+        suggestion: suggestionRef.current.value,
+        username: user?.username as string,
+      });
       toast.success('Your suggestion has been sent! Thank you!');
     } catch (error) {
       toast.error('Something went wrong! Please try again later.');

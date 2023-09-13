@@ -14,7 +14,7 @@ const SelectOptions = [
 ];
 
 function AdminCreateChallenge() {
-  const [challenge, setChallenge] = useState({
+  const [challenge, setChallenge] = useState<any>({
     tech: '',
     objective: '',
     description: '',
