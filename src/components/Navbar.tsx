@@ -9,8 +9,9 @@ import GradientTitle from './GradientTitle';
 function Navbar({ user }: { user: UserProps | null }) {
   const [open, setOpen] = useState(false);
 
+  const serverUrl = import.meta.env.VITE_SERVER_URL;
   const loginWithGithub = () => {
-    window.open('http://localhost:4000/auth/github', '_self');
+    window.open(`${serverUrl}/auth/github`, '_self');
   };
 
   window.addEventListener('scroll', () => {
