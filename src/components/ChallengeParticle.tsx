@@ -43,22 +43,22 @@ function ChallengeParticle() {
             type: ['image'],
             image: [
               {
-                src: '../../assets/logos/html.svg',
+                src: '/assets/logos/html.svg',
                 height: 20,
                 width: 20,
               },
               {
-                src: '../../assets/logos/js.png',
+                src: '/assets/logos/js.png',
                 height: 20,
                 width: 20,
               },
               {
-                src: '../../assets/logos/react.svg',
+                src: '/assets/logos/react.svg',
                 height: 20,
                 width: 20,
               },
               {
-                src: '../../assets/logos/css.svg',
+                src: '/assets/logos/css.svg',
                 height: 20,
                 width: 20,
               },
